@@ -29,6 +29,9 @@ source = { editable = "." }
 dependencies = [
     { name = "joblib" },
     { name = "pandas" },
+    { name = "pytest" },
+    { name = "pytest-cov" },
+    { name = "ruff" },
     { name = "scikit-learn" },
 ]
 
@@ -47,8 +50,11 @@ requires-dist = [
     { name = "joblib", specifier = ">=1.4" },
     { name = "pandas", specifier = ">=2.2" },
     { name = "pandera", marker = "extra == 'data'", specifier = ">=0.24" },
+    { name = "pytest", specifier = ">=8" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8" },
+    { name = "pytest-cov", specifier = ">=5" },
     { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=5" },
+    { name = "ruff", specifier = ">=0.16" },
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.16" },
     { name = "scikit-learn", specifier = ">=1.5" },
 ]
