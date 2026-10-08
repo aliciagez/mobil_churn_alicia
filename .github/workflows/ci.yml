@@ -19,6 +19,6 @@ jobs:
 
       - run: uv run --locked python -m churn.evaluate 
 
-      - run: uv run --lockedpython -m churn.score 
+      - run: uv run --locked python -m churn.score 
 
       - run: uv run --locked pytest
