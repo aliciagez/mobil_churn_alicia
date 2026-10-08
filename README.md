@@ -63,6 +63,7 @@ python -m churn.score           # skriver outputs/ringlista.csv
 
 ## Vad som finns här
 
+
 | Sökväg | Innehåll |
 | --- | --- |
 | `data/kundbas.csv` | 2 000 kunder: ålder, region, abonnemang, kostnad, dataförbrukning, supportärenden och om kunden avslutat (`avslutat`) |
