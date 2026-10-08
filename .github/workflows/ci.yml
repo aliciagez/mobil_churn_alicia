@@ -8,18 +8,17 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v7
+      - uses: astral-sh/setup-uv@v10
         with:
           python-version: "3.13"
-          cache: 'pip'
-          cache-dependency-path: pyproject.toml
+          enable-cache: true
 
-      - run: pip install -e .
+      - run: uv sync --locked
 
-      - run: python -m churn.model
+      - run: uv run --locked python -m churn.model
 
-      - run: python -m churn.evaluate 
+      - run: uv run --locked python -m churn.evaluate 
 
-      - run: python -m churn.score 
+      - run: uv run --lockedpython -m churn.score 
 
-      - run: pytest
+      - run: uv run --locked pytest
