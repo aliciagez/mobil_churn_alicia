@@ -14,10 +14,10 @@ jobs:
 
       - run: pip install -e .
 
-      - run: pytest
-
       - run: python -m churn.model
 
       - run: python -m churn.evaluate 
 
       - run: python -m churn.score 
+
+      - run: pytest
