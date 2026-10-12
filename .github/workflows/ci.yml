@@ -20,6 +20,12 @@ jobs:
           enable-cache: true
 
       - run: uv sync --locked
+      
+      - run: uv run --locked python -m churn.model
+
+      - run: uv run --locked python -m churn.evaluate 
+
+      - run: uv run --locked python -m churn.score 
 
       - run: uv run --locked pytest
       
