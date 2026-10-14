@@ -21,6 +21,21 @@ jobs:
 
       - run: uv sync --locked
       
+      - run: uv run --locked python control/schema.py
+jobs:
+  validate_data:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: astral-sh/setup-uv@v8.3.2
+        with:
+          python-version: "3.11"
+          enable-cache: true
+
+      - run: uv sync --locked
+
       - run: uv run --locked python -m churn.model
 
       - run: uv run --locked python -m churn.evaluate 
