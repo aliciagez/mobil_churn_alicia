@@ -22,7 +22,7 @@ jobs:
       - run: uv sync --locked
       
       - run: uv run --locked python control/schema.py
-jobs:
+
   validate_data:
     runs-on: ubuntu-latest
     
