@@ -7,6 +7,10 @@ def test_forvantade_kolumner_finns():
     df = skapa_features(las_data())
     assert set(FEATURES + [MAL]) <= set(df.columns)
 
+def test_uniqe_id():
+    df = skapa_features(las_data())
+    assert df["kund_id"].is_unique
+
 
 def test_malvariabeln_ar_binar():
     assert set(las_data()[MAL].unique()) <= {0, 1}

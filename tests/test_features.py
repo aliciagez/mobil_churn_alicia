@@ -25,6 +25,17 @@ def test_kostnad_per_gb(liten_df):
 def test_region_normaliseras(liten_df):
     assert skapa_features(liten_df)["region"].tolist() == ["Stockholm", "Väst"]
 
+def test_versaler():
+    df = pd.DataFrame(
+        {
+            "manadskostnad": [299.0, 149.0],
+            "data_gb_per_manad": [9.0, 0.0],
+            "region": ["STOCKHOLM", "VÄST"],
+        }
+    )
+
+    test = skapa_features(df) 
+    assert test["region"].tolist() == ["Stockholm", "Väst"]
 
 def test_indata_andras_inte(liten_df):
     original = liten_df.copy()
