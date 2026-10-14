@@ -46,7 +46,7 @@ jobs:
       
 
   traning:
-    needs: tester
+    needs: tester, validate_data
     runs-on: ubuntu-latest
       
     steps:
