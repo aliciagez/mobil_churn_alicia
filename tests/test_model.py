@@ -41,7 +41,7 @@ def test_senaste_traningen_ar_godkand():
 
 def test_dummy_score(resultat):
     _, matvarden = resultat
-    assert matvarden["roc_auc"] >= 0.70
+    assert matvarden["roc_auc"] >= 0.80
 
     X, y = dela_upp(skapa_features(las_data()))
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=42, stratify=y)
