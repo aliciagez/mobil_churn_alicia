@@ -50,7 +50,7 @@ jobs:
       - name: model artifact
         uses: actions/upload-artifact@v4
         with:
-          name: modell -${{ github.sha }}
+          name: modell-${{ github.sha }}
           path: outputs/
  
   
