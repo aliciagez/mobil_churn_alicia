@@ -1,5 +1,6 @@
 # Det träningen skriver
 outputs/
+models/
 
 # Python
 __pycache__/
